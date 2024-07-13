@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://btq3icepk0jjj"]
+
+[ext_resource type="Script" path="res://prueba cosas/scenes/player.gd" id="1_6sn5i"]
+[ext_resource type="Texture2D" uid="uid://c65uy76fvjo8h" path="res://prueba cosas/sprites/image.png.ef77ca091ea02ced904c8dfbc60a5254.png" id="1_vrdl3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2i704"]
+size = Vector3(0.290802, 0.360291, 0.18335)
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_6sn5i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0130157, 0.0062561, -0.00158691)
+shape = SubResource("BoxShape3D_2i704")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999871, 0.0160738, 0, -0.0160738, 0.999871, 0.00169444, 0.177051, 0.73526)
+fov = 68.1187
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11261, 0)
+texture = ExtResource("1_vrdl3")
+hframes = 4
+vframes = 4

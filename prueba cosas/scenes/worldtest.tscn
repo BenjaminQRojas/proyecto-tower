@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwpd58v0e54xo"]
+
+[ext_resource type="MeshLibrary" uid="uid://b0d7ktr14gxv3" path="res://prueba cosas/libs/meshlibtest.tres" id="1_mjr00"]
+[ext_resource type="PackedScene" uid="uid://btq3icepk0jjj" path="res://prueba cosas/scenes/player.tscn" id="2_vp4od"]
+
+[node name="Worldtest" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_mjr00")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(0, 65535, 0, 65535, 65535, 0, 65535, 0, 0, 0, 0, 0, 1, 65535, 0, 1, 65534, 0, 0, 65534, 0, 65535, 65534, 0, 65534, 65534, 0, 65534, 65535, 0, 65534, 0, 0, 65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 65533, 0, 0, 65533, 0, 65535, 65533, 0, 65534, 65533, 0, 65533, 65534, 0, 65533, 65535, 0, 65533, 0, 0, 65533, 1, 0, 65533, 2, 0, 65534, 2, 0, 65535, 2, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 2, 1, 0, 2, 0, 0, 2, 65535, 0, 2, 65534, 0, 2, 65533, 0, 65533, 65533, 0, 65532, 3, 0, 65533, 3, 0, 65534, 3, 0, 65535, 3, 0, 0, 3, 0, 1, 3, 0, 2, 3, 0, 3, 2, 0, 3, 3, 0, 3, 1, 0, 3, 0, 0, 3, 65535, 0, 3, 65534, 0, 3, 65533, 0, 3, 65532, 0, 2, 65532, 0, 1, 65532, 0, 0, 65532, 0, 65535, 65532, 0, 65534, 65532, 0, 65533, 65532, 0, 65532, 65532, 0, 65532, 65533, 0, 65532, 65534, 0, 65532, 65535, 0, 65532, 0, 0, 65532, 1, 0, 65532, 2, 0)
+}
+
+[node name="Player" parent="." instance=ExtResource("2_vp4od")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0706697, 1.61069, -0.4172)
